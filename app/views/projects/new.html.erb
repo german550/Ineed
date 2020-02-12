@@ -1,0 +1,6 @@
+<h1>Add a new project</h1>
+<%= form_with model: [@project], class: "nifty_form" do |f| %>
+  <%= f.file_field :image %>
+  <%= f.text_area :description, size: "60x12" %>
+  <%= f.submit %>
+<% end %>
