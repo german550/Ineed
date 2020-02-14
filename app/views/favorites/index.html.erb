@@ -1,0 +1,18 @@
+<h1>My favorites projects:</h1>
+
+<div class="bycard">
+<% @favorites.each do |favorite|%>
+<div class="card" style="width: 28rem;">
+  <%= image_tag(favorite.project.image, class:"card-img-top") %>
+     <h5 class="card-title"><%= favorite.project.category %></h5>
+     <p class="card-text"><%= favorite.project.description %></p>
+
+     <div class="col-1">
+       <%= button_to "delete", "/projects/#{favorite.project.id}/favorites/#{favorite.id}", method: :delete, class:"btn btn-primary" %>
+     </div>
+     </div>
+     <% end %>
+
+
+
+ </div>

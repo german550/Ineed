@@ -1,4 +1,5 @@
-<h1>New projects:</h1>
+<h1>My projects:</h1>
+
 <div class="bycard">
   <% @projects.each do |project|%>
   <div class="card" style="width: 28rem;">
@@ -11,15 +12,6 @@
          <%= button_to "delete", project, method: :delete, class:"btn btn-primary" %>
        </div>
       <% end %>
-      <% if project.user != current_user %>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Select this project</label>
-      </div>
-
-      <%= button_to "Favorite", "/projects/#{project.id}/favorites", method: :post %>
-      <% end %>
 </div>
 <% end %>
-
   </div>

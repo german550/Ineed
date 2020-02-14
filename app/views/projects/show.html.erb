@@ -1,9 +1,19 @@
-<h2> This is what I need:</h2>
+
+<h2> This is what I'need:</h2>
 
 
-<%= @project.description %>
-<%= image_tag(@project.image) %>
 
-<div class="col-1">
-  <%= button_to "delete", @project, method: :delete %>
+
+<div class="card my-card" style="width: 18rem;">
+  <%= image_tag(@project.image, class:"card-img-top")%>
+
+  <div class="card-body">
+    <h5 class="card-title"><%= @project.category %></h5>
+    <p class="card-text"><%= @project.description %>.</p>
+
+
+    <div class="col-1">
+      <%= button_to "delete", @project, method: :delete, class:"btn btn-primary" %>
+    </div>
+  </div>
 </div>
